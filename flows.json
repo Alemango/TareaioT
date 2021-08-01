@@ -1,0 +1,141 @@
+[
+    {
+        "id": "2264cf36bbb7385a",
+        "type": "tab",
+        "label": "Tarea",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bb914c72a8badb18",
+        "type": "mqtt out",
+        "z": "2264cf36bbb7385a",
+        "name": "",
+        "topic": "codigoIoT/SIC/flow3/temp",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "56a6aea0ed04ef75",
+        "x": 930,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "790abb62df84cf0c",
+        "type": "debug",
+        "z": "2264cf36bbb7385a",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "068c0ac8f3ce4869",
+        "type": "ui_form",
+        "z": "2264cf36bbb7385a",
+        "name": "",
+        "label": "Llena datos",
+        "group": "7cde714bec18ef20",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "ID",
+                "value": "ID",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Temperatura",
+                "value": "Temp",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Mensaje",
+                "value": "mnsg",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "ID": "",
+            "Temp": "",
+            "mnsg": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "x": 570,
+        "y": 100,
+        "wires": [
+            [
+                "790abb62df84cf0c",
+                "bb914c72a8badb18"
+            ]
+        ]
+    },
+    {
+        "id": "56a6aea0ed04ef75",
+        "type": "mqtt-broker",
+        "name": "Tarea Flow 3",
+        "broker": "3.66.119.222",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "7cde714bec18ef20",
+        "type": "ui_group",
+        "name": "Insertar temperatura",
+        "tab": "627a2a8979f215c5",
+        "order": 1,
+        "disp": true,
+        "width": "8",
+        "collapse": false
+    },
+    {
+        "id": "627a2a8979f215c5",
+        "type": "ui_tab",
+        "name": "Tarea Tab",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    }
+]
